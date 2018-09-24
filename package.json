@@ -1,0 +1,57 @@
+{
+  "name": "capitaine-flemme",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "react": "^16.5.2",
+    "react-dom": "^16.5.2",
+    "spectacle": "^5.1.0",
+    "spectacle-code-slide": "^0.5.2",
+    "spectacle-scripts": "2.0.0"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "standard",
+      "prettier",
+      "plugin:react/recommended",
+      "plugin:import/errors"
+    ],
+    "plugins": [
+      "prettier",
+      "react",
+      "import"
+    ],
+    "parser": "babel-eslint",
+    "rules": {
+      "prettier/prettier": [
+        "error",
+        {
+          "arrowParens": "always",
+          "singleQuote": true,
+          "trailingComma": "es5",
+          "semi": false
+        }
+      ],
+      "no-irregular-whitespace": 0
+    },
+    "env": {
+      "browser": true,
+      "commonjs": true,
+      "es6": true,
+      "jest": true,
+      "node": true
+    }
+  },
+  "prettier": {
+    "arrowParens": "always",
+    "singleQuote": true,
+    "trailingComma": "es5",
+    "semi": false
+  }
+}
