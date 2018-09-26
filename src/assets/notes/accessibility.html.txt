@@ -1,0 +1,10 @@
+<div>
+  <p>Dans l'éditeur on utilise le plugin ESLint <code>jsx-a11y</code></p>
+  <p>Démo avec la mise en œuvre des emijo sur le projet.</p>
+  <p>On voit alors le linter nous indiquer qu'on a oublié les rôles et les aria-label autour des emojis.</p>
+</div>
+<div>
+  <p>Côté tests automatisés on utilise en vrai plusieurs choses : <code>axe-core, jest-puppeteer, puppeteer, serve</code></p>.
+  <p>Ouvrir le fichier <code>accessibility/home.test.js</code></p>.
+  <p>Lancer <code>npm run test:accessibility</code></p>
+</div>

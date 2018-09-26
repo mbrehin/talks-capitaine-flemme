@@ -80,7 +80,7 @@
   "husky": {
     "hooks": {
       "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
-      "pre-push": "./git-hooks/pre-push.js",
+      "pre-push": "npm run build && npm run test:accessibility",
       "pre-commit": "./git-hooks/pre-commit.js && precise-commits"
     }
   },

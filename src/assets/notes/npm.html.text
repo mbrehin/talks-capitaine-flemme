@@ -1,0 +1,3 @@
+<p>Démonstration au sein du projet <code>npm i</code>.</p>
+
+<p>Pour éviter d'aller requêter le distant et utiliser le cache local, on va feinter pour la démo et faire un <code>npm i --offline</code></p>

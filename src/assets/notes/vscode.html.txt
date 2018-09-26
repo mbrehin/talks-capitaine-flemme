@@ -1,0 +1,5 @@
+Demonstration de l’installation VSCode avec recommandation des plugins et configuration du projet.
+<ul>
+  <li>Recuperation du projet via un <code>git@github.com:mbrehin/capitaine-flemme.git</code>.</li>
+  <li>Montrer l'emplacement des fichiers dans le sous-repertoire <code>.vscode</code> du projet.</li>
+</ul>

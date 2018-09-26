@@ -1,0 +1,2 @@
+<p>On relance le lint, le formatage, des fois que l'éditeur ait laissé passé quelque chose ou que le développeur ait utilisé un autre éditeur que VSCode</p>
+<p>On va également vérifier les contenus prêts au commit pour vérifier qu'on a pas des mots clés interdits.</p>

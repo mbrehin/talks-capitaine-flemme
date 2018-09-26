@@ -1,0 +1,3 @@
+<p>Rappeler pour les conventions la possibilité de renseigner un fichier <code>CONTRIBUTING.md</code>, ou à défaut <code>README.md</code>.</p>
+<p>On peut justifier l'usage du premier pour les rappels automatiques dans GitHub depuis les <i>issues</i></p>
+

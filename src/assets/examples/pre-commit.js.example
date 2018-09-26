@@ -1,0 +1,16 @@
+const patterns = [
+  {
+    message: 'You’ve got leftover conflict markers',
+    regex: /^[<>|=]{4,}/m,
+  },
+  {
+    filter: /\.js$/,
+    message: 'You’ve got leftover `console.log`',
+    regex: /console\.log/,
+  },
+  {
+    message: 'You have unfinished devs',
+    nonBlocking: true,
+    regex: /(?:FIXME|TODO)/,
+  },
+]
