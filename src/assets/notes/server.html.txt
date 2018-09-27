@@ -1,0 +1,2 @@
+<p>On connait déjà les procédures d'automatisation et de fiabilisation telles que les pull requests et CI.</p>
+<p>Mais des choses plus avancées arrivent et qui n'en sont qu'à leurs prémisses.</p>

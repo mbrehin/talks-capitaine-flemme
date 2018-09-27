@@ -1,0 +1,23 @@
+<p>Expliquer la découverte de stack technique avec le service Heroku (<a href="https://devcenter.heroku.com/articles/buildpacks">heroku buildpacks</a>)</p>
+<p>Si on a le temps on peut tenter une démo de déploiement automatiser juste pour montrer la pipeline</p>.
+<p>
+  Ce que fait la pipeline automatisée :
+  <ul>
+    <li>1. build</li>
+    <li>2. tests
+      <ul>
+        <li>code quality</li>
+        <li>container scanning (check security issues sur container docker)</li>
+        <li>dependency scanning</li>
+        <li>license management</li>
+        <li>SAST (Static Analysis Security Testing)</li>
+        <li>Tests</li>
+      </ul>
+    </li>
+    <li>3. Review</li>
+    <li>4. DAST (Dynamic Analysis Security Testing)</li>
+    <li>5. Performance (utilise le conteneur sitespeed.io)</li>
+    <li>6. Production</li>
+    <li>7. Auto-monitoring</li>
+  </ul>
+</p>

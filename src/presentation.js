@@ -12,11 +12,9 @@ import {
 import CodeSlide from 'spectacle-code-slide'
 import createTheme from 'spectacle/lib/themes/default'
 
-require('normalize.css')
+import bgImage from './assets/capitaine-flemme.jpg'
 
-const images = {
-  captain: require('./assets/capitaine-flemme.jpg'),
-}
+require('normalize.css')
 
 const examples = {
   gitHistory: require('./assets/examples/git-history.bash.example'),
@@ -26,9 +24,11 @@ const examples = {
 
 const notes = {
   accessibility: require('./assets/notes/accessibility.html.txt'),
+  autodevops: require('./assets/notes/autodevops.html.txt'),
   conventions: require('./assets/notes/conventions.html.txt'),
   lint: require('./assets/notes/lint.html.txt'),
   preCommit: require('./assets/notes/preCommit.html.txt'),
+  server: require('./assets/notes/server.html.txt'),
   vscode: require('./assets/notes/vscode.html.txt'),
 }
 
@@ -57,11 +57,7 @@ export default class Presentation extends React.Component {
   render() {
     return (
       <Deck transition={[]} transitionDuration={500} theme={theme}>
-        <Slide
-          transition={['fade']}
-          bgColor="secondary"
-          bgImage={images.captain.replace('/', '')}
-        >
+        <Slide transition={['fade']} bgColor="secondary" bgImage={bgImage}>
           <Heading
             size={1}
             fit
@@ -138,11 +134,14 @@ export default class Presentation extends React.Component {
           <Heading size={4} textColor="primary">
             Comment automatiser et améliorer
             <br />
-            l'expérience de développement
+            son expérience de développement
             <br />
-            et le travail produit
+            et la qualité du travail produit
             <br />
-            sans trop d'effort ?
+            sans trop d'effort ?{' '}
+            <span role="img" aria-label="ça donne matière à réfléchir">
+              🤔
+            </span>
           </Heading>
         </Slide>
 
@@ -254,10 +253,10 @@ export default class Presentation extends React.Component {
             L’accessibilité, il connait…
           </Heading>
           <Appear>
-            <Text size={6} textColor="primary">
+            <Text textColor="primary" fit>
               …mais pour la mise en œuvre, ça laisse à désirer{' '}
-              <span role="img" aria-label="bah oui, c’est inquiétant tout ça">
-                🤔
+              <span role="img" aria-label="y’en a qui vont être fâchés !">
+                😤
               </span>
 
                !
@@ -345,7 +344,7 @@ export default class Presentation extends React.Component {
           ranges={[
             {
               loc: [132, 133],
-              note: 'Il l’installe en « dev depency »',
+              note: 'Il l’installe en « dev dependency »',
             },
             { loc: [79, 86], note: 'puis renseigne les hooks désirés' },
             {
@@ -377,14 +376,12 @@ export default class Presentation extends React.Component {
         </Slide>
 
         <Slide transition={['fade']} bgColor="tertiary">
-          <Heading size={4} textColor="primary" fit>
-            …et son historique de commits qui était souvent…
+          <Heading textColor="primary" fit>
+            …et son historique de commits qui était souvent
           </Heading>
-          <Appear>
-            <Heading size={4} textColor="secondary">
-              …imparfait, brouillon, désordonné…
-            </Heading>
-          </Appear>
+          <Heading size={5} textColor="secondary">
+            imparfait, brouillon, désordonné…
+          </Heading>
         </Slide>
 
         <Slide transition={['fade']} bgColor="tertiary">
@@ -398,16 +395,16 @@ export default class Presentation extends React.Component {
         </Slide>
 
         <Slide transition={['fade']} bgColor="primary">
-          <Heading size={4} textColor="tertiary">
-            …devrait s’améliorer, maintenant qu’il peut se faire aider
+          <Heading size={4} textColor="tertiary" fit>
+            …s’améliore, maintenant qu’il peut se faire aider
           </Heading>
           <Appear>
-            <Heading size={4} textColor="secondary">
+            <Heading size={5} textColor="secondary">
               à la saisie, avec un assistant ;
             </Heading>
           </Appear>
           <Appear>
-            <Heading size={4} textColor="secondary">
+            <Heading size={5} textColor="secondary" fit>
               après saisie, avec une vérification automatisée
             </Heading>
           </Appear>
@@ -448,7 +445,7 @@ export default class Presentation extends React.Component {
           ranges={[
             {
               loc: [114, 115],
-              note: 'Installé aussi en « dev depency »',
+              note: 'Installé aussi en « dev dependency »',
             },
             {
               loc: [115, 116],
@@ -468,7 +465,7 @@ export default class Presentation extends React.Component {
 
         <Slide transition={['fade']} bgColor="primary">
           <Heading size={5} textColor="tertiary">
-            sinon, quand il sera perdu
+            sinon, quand il est perdu
             <span
               role="img"
               aria-label="désemparé devant l'oubli des conventions, encore une fois…"
@@ -480,7 +477,7 @@ export default class Presentation extends React.Component {
               git commitizen
             </Code>
             <br />
-            pourra l'assister dans sa saisie
+            peut l'assister dans sa saisie
           </Heading>
         </Slide>
 
@@ -493,7 +490,7 @@ export default class Presentation extends React.Component {
             {
               loc: [119, 120],
               note:
-                '« dev depency » (pour utiliser `git cz` au lieu de `git commit`)',
+                '« dev dependency » (pour utiliser `git cz` au lieu de `git commit`)',
             },
             {
               loc: [120, 121],
@@ -507,6 +504,22 @@ export default class Presentation extends React.Component {
           ]}
         />
 
+        <Slide transition={['fade']} bgColor="primary">
+          <Heading textColor="tertiary" fit>
+            Enfin, quand il est prêt à « pusher » tout ça,
+          </Heading>
+          <Heading size={5} textColor="secondary">
+            on vérifie que les tests d'accessibilité sont au vert{' '}
+            <span role="img" aria-label="Houston, paré au lancement">
+              👍
+            </span>
+            , sinon on invalide le push{' '}
+            <span role="img" aria-label="Houston, on a un problème">
+              👎
+            </span>
+          </Heading>
+        </Slide>
+
         {/* TODO: */}
         {/*
         Dernièrement il s'est mis à SVG…
@@ -515,7 +528,7 @@ export default class Presentation extends React.Component {
 
       */}
 
-        <Slide transition={['fade']} bgColor="tertiary">
+        <Slide transition={['fade']} bgColor="tertiary" notes={notes.server}>
           <Heading size={4} textColor="primary">
             Voilà pour le confort autour de son expérience locale…
           </Heading>
@@ -523,10 +536,46 @@ export default class Presentation extends React.Component {
             …mais côté serveur on commence à voir des choses super sympa pour
             automatiser un max
           </Heading>
-          <Text textColor="secondary" fit>
-            (outre les pull requests et CI, on voit apparaître des trucs comme
-            l'auto devops de GitLab)
-          </Text>
+        </Slide>
+
+        <Slide
+          transition={['fade']}
+          bgColor="tertiary"
+          notes={notes.autodevops}
+        >
+          <Heading size={4} textColor="primary">
+            L'auto devops, de GitLab, et la magie opère{' '}
+            <span role="img" aria-label="abracadabra">
+              🧙‍
+            </span>
+
+             !
+          </Heading>
+          <Appear>
+            <Text>build</Text>
+          </Appear>
+          <Appear>
+            <Text>
+              qualité du code, vulnérabilités,{' '}
+              <abbr title="Static Analysis Security Testing">SAST</abbr>, tests…
+            </Text>
+          </Appear>
+          <Appear>
+            <Text>
+              <abbr title="Dynamic Analysis Security Testing">DAST</abbr>
+            </Text>
+          </Appear>
+          <Appear>
+            <Text>performance</Text>
+          </Appear>
+          <Appear>
+            <Text>
+              déploiement auto. ou manuel : review/staging, production
+            </Text>
+          </Appear>
+          <Appear>
+            <Text>monitoring automatisé</Text>
+          </Appear>
         </Slide>
 
         <Slide transition={['fade']} bgColor="tertiary">
