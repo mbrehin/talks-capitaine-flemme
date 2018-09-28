@@ -26,6 +26,7 @@ const notes = {
   accessibility: require('./assets/notes/accessibility.html.txt'),
   autodevops: require('./assets/notes/autodevops.html.txt'),
   conventions: require('./assets/notes/conventions.html.txt'),
+  intro: require('./assets/notes/intro.html.txt'),
   lint: require('./assets/notes/lint.html.txt'),
   preCommit: require('./assets/notes/preCommit.html.txt'),
   server: require('./assets/notes/server.html.txt'),
@@ -52,7 +53,13 @@ const theme = adjustTheme(
   )
 )
 
-const styles = { codeSlides: 35, codeTitle: 80, small: 45, lineHeight: 1.4 }
+const styles = {
+  codeSlides: 35,
+  codeTitle: 80,
+  small: 45,
+  lineHeight: 1.4,
+  urlBig: 80,
+}
 
 Slide.defaultProps.viewerScaleMode = true
 
@@ -97,7 +104,7 @@ export default class Presentation extends React.Component {
           </span>
         </Slide>
 
-        <Slide transition={['fade']} bgColor="tertiary">
+        <Slide transition={['fade']} bgColor="tertiary" notes={notes.intro}>
           <Heading size={4} textColor="primary" lineHeight={styles.lineHeight}>
             Quand il bosse sur un projet, il préfère éviter de tout casser par
             erreur…
@@ -433,9 +440,9 @@ export default class Presentation extends React.Component {
               bgColor="primary"
               textSize={styles.codeTitle}
             >
-              commit-lint
+              commitlint
             </Code>
-            et au hook de pre-commit
+            et au hook de commit-msg
           </Heading>
           <Appear>
             <Text textColor="secondary">
@@ -461,12 +468,12 @@ export default class Presentation extends React.Component {
             },
             {
               loc: [21, 24],
-              note: '…chargée pour commit-lint…',
+              note: '…chargée pour commitlint…',
             },
 
             {
-              loc: [81, 84],
-              note: '…et Husky prêt à déclencher ça au pre-commit !',
+              loc: [81, 82],
+              note: '…et Husky prêt à déclencher ça au commit-msg !',
             },
           ]}
         />
@@ -600,22 +607,16 @@ export default class Presentation extends React.Component {
           <Heading textColor="tertiary" size={4} lineHeight={styles.lineHeight}>
             Les slides
           </Heading>
-          <Text fit>
-            <Link
-              href="https://github.com/mbrehin/talks-capitaine-flemme"
-              textColor="secondary"
-            >
-              https://github.com/mbrehin/talks-capitaine-flemme
+          <Text textSize={styles.urlBig}>
+            <Link href="http://bit.ly/capflem-slides" textColor="secondary">
+              bit.ly/capflem-slides
             </Link>
           </Text>
         </Slide>
 
         <Slide transition={['fade']} bgColor="primary">
           <Heading textColor="tertiary" size={5} lineHeight={styles.lineHeight}>
-            <Link
-              href="https://github.com/mbrehin/capitaine-flemme"
-              textColor="tertiary"
-            >
+            <Link href="https://bit.ly/capflem-code" textColor="tertiary">
               Le projet
             </Link>{' '}
             et son{' '}
@@ -636,12 +637,9 @@ export default class Presentation extends React.Component {
 
              !
           </Heading>
-          <Text fit>
-            <Link
-              href="https://github.com/mbrehin/capitaine-flemme"
-              textColor="secondary"
-            >
-              https://github.com/mbrehin/capitaine-flemme
+          <Text textSize={styles.urlBig}>
+            <Link href="https://bit.ly/capflem-code" textColor="secondary">
+              bit.ly/capflem-code
             </Link>
           </Text>
         </Slide>
@@ -659,7 +657,7 @@ export default class Presentation extends React.Component {
               @mbrehin
             </Link>
           </Text>
-          <Text size={1}>
+          <Text>
             <Link
               href="https://delicious-insights.com/"
               textColor="secondary"
