@@ -32,33 +32,43 @@ const notes = {
   vscode: require('./assets/notes/vscode.html.txt'),
 }
 
-const theme = createTheme(
-  // Colors
-  {
-    primary: '#44b1cd',
-    secondary: '#505050',
-    tertiary: '#ffffff',
-    quaternary: '#ccc',
-  },
-  // Fonts
-  {
-    primary: {
-      name: 'Advent Pro',
-      googleFont: true,
-      styles: ['400', '700i'],
+const theme = adjustTheme(
+  createTheme(
+    // Colors
+    {
+      primary: '#44b1cd',
+      secondary: '#505050',
+      tertiary: '#ffffff',
+      quaternary: '#ccc',
     },
-    // secondary: {
-    //   name: 'Montserrat',
-    //   googleFont: true,
-    //   styles: ['400', '700i'],
-    // },
-  }
+    // Fonts
+    {
+      primary: {
+        name: 'Advent Pro',
+        googleFont: true,
+        styles: ['400', '700i'],
+      },
+      // secondary: {
+      //   name: 'Montserrat',
+      //   googleFont: true,
+      //   styles: ['400', '700i'],
+      // },
+    }
+  )
 )
+
+Slide.defaultProps.viewerScaleMode = true
 
 export default class Presentation extends React.Component {
   render() {
     return (
-      <Deck transition={[]} transitionDuration={500} theme={theme}>
+      <Deck
+        contentWidth="90%"
+        contentHeight="80%"
+        transition={[]}
+        transitionDuration={500}
+        theme={theme}
+      >
         <Slide transition={['fade']} bgColor="secondary" bgImage={bgImage}>
           <Heading
             size={1}
@@ -76,10 +86,13 @@ export default class Presentation extends React.Component {
           <span
             style={{
               position: 'absolute',
-              bottom: '-23%',
+              left: 0,
+              right: 0,
+              bottom: '-2.5em',
               margin: '0 auto',
               color: '#ddd',
-              fontSize: 20,
+              fontSize: '1.2em',
+              textAlign: 'center',
             }}
             aria-label="Crédit image : leroimarcus"
           >
@@ -668,4 +681,13 @@ export default class Presentation extends React.Component {
       </Deck>
     )
   }
+}
+
+function adjustTheme(theme) {
+  const {
+    screen: { global },
+  } = theme
+  delete global.body.fontSize
+  global.html = { fontSize: '2vmin' }
+  return theme
 }
