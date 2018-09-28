@@ -1,22 +1,16 @@
-* fada32e - Merge branch 'fixes' (KptN Flèm 1 day ago)
-|\
-| * 83599c6 - Damned, forgot issue ref #42 (KptN Flèm 1 day ago)
-| * 951f551 - Fix issue # (KptN Flèm 2 days ago)
-| * f51ad87 - YOLO! (KptN Flèm 2 days ago)
-| * 8566c98 - TODO: to be fixed (KptN Flèm 3 days ago)
-|/
-* 2fca612 - Small fix on master (KptN Flèm 4 days ago)
-* a3247c4 - Merge branch 'new-feature' (KptN Flèm 5 days ago)
-|\
-| * bfd66a3 - …almost (KptN Flèm 1 week ago)
-| * 9d0fc8f - Now my feature is done (KptN Flèm 1 week ago)
-| * 5a67cbf - nobody knows what it’s about (KptN Flèm 2 weeks ago)
-| * 69c7532 - and something more (KptN Flèm 2 weeks ago)
-| * b6fc0b2 - but I missed something (KptN Flèm 2 weeks ago)
-| * 64a5edd - I did it! (KptN Flèm 3 weeks ago)
-|/
-* aa7004b - Ooops (KptN Flèm 1 month ago)
-* 4ac1124 - Fix last stuff (KptN Flèm 1 month ago)
-* 30a9eb4 - More stuff (KptN Flèm 1 month ago)
-* 41d8dd8 - Add stuff (KptN Flèm 1 month ago)
-* 80c518e - Initial commit (KptN Flèm 1 month ago)
+        | * 83599c6 - Damned, forgot issue ref #42 (KptN Flèm 1 day ago)
+        | * 951f551 - Fix issue # (KptN Flèm 2 days ago)
+        | * f51ad87 - YOLO! (KptN Flèm 2 days ago)
+        | * 8566c98 - TODO: to be fixed (KptN Flèm 3 days ago)
+        |/
+        * 2fca612 - Small fix on master (KptN Flèm 4 days ago)
+        * a3247c4 - Merge branch 'new-feature' (KptN Flèm 5 days ago)
+        |\
+        | * 5a67cbf - nobody knows what it’s about (KptN Flèm 2 weeks ago)
+        | * 69c7532 - and something more (KptN Flèm 2 weeks ago)
+        | * b6fc0b2 - but I missed something (KptN Flèm 2 weeks ago)
+        | * 64a5edd - I did it! (KptN Flèm 3 weeks ago)
+        |/
+        * aa7004b - Ooops (KptN Flèm 1 month ago)
+        * 30a9eb4 - More stuff (KptN Flèm 1 month ago)
+        * 41d8dd8 - Add stuff (KptN Flèm 1 month ago)
