@@ -1,0 +1,8 @@
+<ul>
+  <li>Il ne sait jamais quels outils installer,</li>
+  <li>il ne connait pas ou oublie les conventions,</li>
+  <li>il ne se rappelle plus les bonnes pratiques,</li>
+  <li>il manque parfois de rigueur…</li>
+</ul>
+<p>Rappeler des conventions <code>CONTRIBUTING.md</code> et <code>README.md</code>.</p>
+<p>On peut justifier l'usage du premier pour les rappels automatiques dans GitHub depuis les <i>issues</i></p>

@@ -1,0 +1,2 @@
+<p>Démonstration d’un message de commit mal formaté</p>
+<pre><code>git commit --allow-empty -m 'I really don’t know what I’m doing, LOL!'</code></pre>

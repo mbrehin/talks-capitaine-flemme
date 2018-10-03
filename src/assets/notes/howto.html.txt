@@ -1,0 +1,3 @@
+<p>Quels outils sont disponibles pour l'aider à combler ces lacunes ?</p>
+<p>Même si on est loin d’une IA qui codera pour nous, on a déjà pas mal de choses pratiques et assez faciles à mettre en œuvre.</p>
+<p>L'idée est d’épauler notre héro de manière automatique, sans avoir à y penser (une install au démarrage et c'est parti !).</p>

@@ -1,2 +1,8 @@
+<p>On peut aller beaucoup plus loin en automatisant tout ce dont on a besoin</p>
+<ul>
+  <li>tests</li>
+  <li>optimisations (SVG avec svgo, images avec ImageOptim…)</li>
+  <li>à vous d'imaginer la suite !</li>
+</ul>
 <p>On connait déjà les procédures d'automatisation et de fiabilisation telles que les pull requests et CI.</p>
 <p>Mais des choses plus avancées arrivent et qui n'en sont qu'à leurs prémisses.</p>

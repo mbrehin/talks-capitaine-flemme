@@ -1,1 +1,5 @@
-<p>Comme c’est un bonne feignasse, il veut se fouler le moins possible quand il doit bosser pour loutrer un maximum dans son fauteuil en robe de chambre…</p>
+<p>Comme vous pouvez le déduire de sa posture, Capitaine flemme est développeur web 😁</p>
+<p>C'est un fénéant, mais malin, et il veut se fouler le moins possible quand il doit bosser…</p>
+<p>Le soucis est qu'il est souvent parasité par des contraintes liées au projet et au travail en équipe.</p>
+
+<p>L'objectif de ce talk est de vous donner quelques trucs et astuces pour vous recentrer sur votre expertise, le développement, et limiter les parasitages liés au contexte (outils tiers, …).</p>

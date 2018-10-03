@@ -1,0 +1,2 @@
+<p>On commence donc par la base, ce qui touche directement à son travail, le développement et pour commencer, son <em>éditeur</em></p>
+<p>On cherche donc à automatiser certaines tâches et surtout à partager ce comportement de manière <em>uniforme</em> dans le projet.</p>

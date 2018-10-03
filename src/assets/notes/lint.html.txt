@@ -1,14 +1,2 @@
 <p>Démonstration du lint et du formatage dans VSCode</p>
 
-<p>Dans un fichier <code>src/soLazy.js</code> : </p>
-<pre>
-<code>
-function iAmSoLazy({wiith='la',soooo,many,args,we,should,use,multiLines}){if(!args){return 'WTF?'}
-if (we === 'are the world') return 'MJ';
-//Check my useless comment dude!
-const flem="la" ;
-const [ mar,dise]=["zi",'ness' ];
-return flem === wiith ? flem + mar + dise : 42;
-}
-</code>
-</pre>

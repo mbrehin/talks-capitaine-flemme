@@ -25,12 +25,17 @@ const examples = {
 const notes = {
   accessibility: require('./assets/notes/accessibility.html.txt'),
   autodevops: require('./assets/notes/autodevops.html.txt'),
-  conventions: require('./assets/notes/conventions.html.txt'),
+  coding: require('./assets/notes/coding.html.txt'),
+  commitlint: require('./assets/notes/commitlint.html.txt'),
+  goret: require('./assets/notes/goret.html.txt'),
+  howto: require('./assets/notes/howto.html.txt'),
   intro: require('./assets/notes/intro.html.txt'),
   lint: require('./assets/notes/lint.html.txt'),
   preCommit: require('./assets/notes/preCommit.html.txt'),
   server: require('./assets/notes/server.html.txt'),
+  team: require('./assets/notes/team.html.txt'),
   vscode: require('./assets/notes/vscode.html.txt'),
+  weakness: require('./assets/notes/weakness.html.txt'),
 }
 
 const theme = adjustTheme(
@@ -73,7 +78,12 @@ export default class Presentation extends React.Component {
         transitionDuration={500}
         theme={theme}
       >
-        <Slide transition={['fade']} bgColor="secondary" bgImage={bgImage}>
+        <Slide
+          transition={['fade']}
+          bgColor="secondary"
+          bgImage={bgImage}
+          notes={notes.intro}
+        >
           <Heading
             size={1}
             fit
@@ -104,7 +114,7 @@ export default class Presentation extends React.Component {
           </span>
         </Slide>
 
-        <Slide transition={['fade']} bgColor="tertiary" notes={notes.intro}>
+        <Slide transition={['fade']} bgColor="tertiary" notes={notes.team}>
           <Heading size={4} textColor="primary" lineHeight={styles.lineHeight}>
             Quand il bosse sur un projet, il préfère éviter de tout casser par
             erreur…
@@ -116,11 +126,7 @@ export default class Presentation extends React.Component {
           </Appear>
         </Slide>
 
-        <Slide
-          transition={['fade']}
-          bgColor="tertiary"
-          notes={notes.conventions}
-        >
+        <Slide transition={['fade']} bgColor="tertiary" notes={notes.weakness}>
           <Heading size={4} textColor="primary">
             Alors il a analysé ses lacunes :
           </Heading>
@@ -149,7 +155,7 @@ export default class Presentation extends React.Component {
           </Appear>
         </Slide>
 
-        <Slide transition={['fade']} bgColor="tertiary">
+        <Slide transition={['fade']} bgColor="tertiary" notes={notes.howto}>
           <Heading size={4} textColor="primary" lineHeight={styles.lineHeight}>
             Comment automatiser et améliorer son expérience de développement et
             la qualité du travail produit sans trop d'effort ?{' '}
@@ -159,7 +165,7 @@ export default class Presentation extends React.Component {
           </Heading>
         </Slide>
 
-        <Slide transition={['fade']} bgColor="tertiary">
+        <Slide transition={['fade']} bgColor="tertiary" notes={notes.coding}>
           <Heading size={4} textColor="primary">
             Il a besoin de fiabiliser l'écriture de ses développements
           </Heading>
@@ -236,7 +242,7 @@ export default class Presentation extends React.Component {
           </Appear>
         </Slide>
 
-        <Slide transition={['fade']} bgColor="tertiary">
+        <Slide transition={['fade']} bgColor="tertiary" notes={notes.goret}>
           <Heading size={4} textColor="primary" lineHeight={styles.lineHeight}>
             Quand il code, il devient souvent…
           </Heading>
@@ -266,11 +272,7 @@ export default class Presentation extends React.Component {
           </Appear>
         </Slide>
 
-        <Slide
-          transition={['fade']}
-          bgColor="tertiary"
-          notes={notes.accessibility}
-        >
+        <Slide transition={['fade']} bgColor="tertiary">
           <Heading size={4} textColor="primary">
             L’accessibilité, il connait…
           </Heading>
@@ -286,7 +288,11 @@ export default class Presentation extends React.Component {
           </Appear>
         </Slide>
 
-        <Slide transition={['fade']} bgColor="primary">
+        <Slide
+          transition={['fade']}
+          bgColor="primary"
+          notes={notes.accessibility}
+        >
           <Heading size={4} textColor="tertiary">
             Alors là aussi il se fait un peu aider
           </Heading>
@@ -432,7 +438,7 @@ export default class Presentation extends React.Component {
           </Appear>
         </Slide>
 
-        <Slide transition={['fade']} bgColor="primary">
+        <Slide transition={['fade']} bgColor="primary" notes={notes.commitlint}>
           <Heading textColor="tertiary" size={4}>
             grâce à
             <Code
