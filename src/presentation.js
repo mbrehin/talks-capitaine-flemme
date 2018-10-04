@@ -38,12 +38,29 @@ const notes = {
   weakness: require('./assets/notes/weakness.html.txt'),
 }
 
+const colors = {
+  secondary: '#505050',
+}
+
+const styles = {
+  codeSlides: 35,
+  codeTitle: 80,
+  small: 45,
+  lineHeight: 1.4,
+  urlBig: 80,
+  colors: {
+    secondary: {
+      color: colors.secondary,
+    },
+  },
+}
+
 const theme = adjustTheme(
   createTheme(
     // Colors
     {
       primary: '#44b1cd',
-      secondary: '#505050',
+      secondary: colors.secondary,
       tertiary: '#ffffff',
       quaternary: '#ccc',
     },
@@ -58,21 +75,13 @@ const theme = adjustTheme(
   )
 )
 
-const styles = {
-  codeSlides: 35,
-  codeTitle: 80,
-  small: 45,
-  lineHeight: 1.4,
-  urlBig: 80,
-}
-
 Slide.defaultProps.viewerScaleMode = true
 
 export default class Presentation extends React.Component {
   render() {
     return (
       <Deck
-        contentWidth="80%"
+        contentWidth="90%"
         contentHeight="80%"
         transition={[]}
         transitionDuration={500}
@@ -170,7 +179,7 @@ export default class Presentation extends React.Component {
             Il a besoin de fiabiliser l'écriture de ses développements
           </Heading>
           <Appear>
-            <Text textColor="secondary">
+            <Text textColor="secondary" fit>
               en automatisant certains mécanismes dans l'éditeur
             </Text>
           </Appear>
@@ -186,7 +195,7 @@ export default class Presentation extends React.Component {
             Alors il utilise VSCode…
           </Heading>
           <Appear>
-            <Text textColor="secondary">
+            <Text textColor="secondary" fit>
               Gratuit, portable, puissant, configurable, extensible…
             </Text>
           </Appear>
@@ -216,27 +225,12 @@ export default class Presentation extends React.Component {
 
         <Slide transition={['fade']} bgColor="primary" notes={notes.npm}>
           <Heading size={4} textColor="tertiary" lineHeight={styles.lineHeight}>
-            …et aussi{' '}
-            <Code
-              textColor="secondary"
-              bgColor="primary"
-              textSize={styles.codeTitle}
-            >
-              npm
-            </Code>{' '}
-            et le{' '}
-            <Code
-              textColor="secondary"
-              bgColor="primary"
-              textSize={styles.codeTitle}
-            >
-              package.json
-            </Code>{' '}
-            du projet pour installer et configurer les modules utiles en une
-            commande
+            …et aussi <span style={styles.colors.secondary}>npm</span> et le{' '}
+            <span style={styles.colors.secondary}>package.json</span> du projet
+            pour installer et configurer les modules utiles en une commande
           </Heading>
           <Appear>
-            <Text textColor="secondary" textSize={styles.small}>
+            <Text textColor="secondary" fit>
               (en utilisant les <i>dev dependencies</i> pour bien faire)
             </Text>
           </Appear>
@@ -277,7 +271,7 @@ export default class Presentation extends React.Component {
             L’accessibilité, il connait…
           </Heading>
           <Appear>
-            <Text textColor="primary">
+            <Text textColor="primary" fit>
               …mais pour la mise en œuvre, ça laisse à désirer{' '}
               <span role="img" aria-label="y’en a qui vont être fâchés !">
                 😤
@@ -305,7 +299,7 @@ export default class Presentation extends React.Component {
             </Text>
           </Appear>
           <Appear>
-            <Text textColor="tertiary">
+            <Text textColor="tertiary" fit>
               Ça ne fait pas tout, mais mieux vaut peu que rien !
             </Text>
           </Appear>
@@ -317,17 +311,17 @@ export default class Presentation extends React.Component {
             partage
           </Heading>
           <Appear>
-            <Text textSize={55} textColor="secondary">
+            <Text textColor="secondary">
               en revérifiant la qualité de son code avant le commit
             </Text>
           </Appear>
           <Appear>
-            <Text textSize={55} textColor="secondary">
+            <Text textColor="secondary">
               en garantissant des messages de commits clairs, concis
             </Text>
           </Appear>
           <Appear>
-            <Text textSize={55} textColor="secondary">
+            <Text textColor="secondary">
               en s'assurant que l'accessibilité est acceptable
             </Text>
           </Appear>
@@ -342,17 +336,12 @@ export default class Presentation extends React.Component {
               <Text textColor="secondary">
                 et il automatise et partage tout ça <br />
                 au sein du projet avec{' '}
-                <Code textColor="secondary" bgColor="primary">
-                  npm
-                </Code>{' '}
-                et{' '}
+                <span style={styles.colors.secondary}>npm</span> et{' '}
                 <Link
                   href="https://www.npmjs.com/package/husky"
                   target="_blank"
                 >
-                  <Code textColor="secondary" bgColor="primary">
-                    husky
-                  </Code>
+                  <span style={styles.colors.secondary}>husky</span>
                 </Link>
               </Text>
               <Text textColor="secondary" textSize={styles.small}>
@@ -432,7 +421,7 @@ export default class Presentation extends React.Component {
             </Text>
           </Appear>
           <Appear>
-            <Text textSize={styles.small} textColor="tertiary">
+            <Text textSize={styles.small} textColor="tertiary" fit>
               (suivant une convention préalablement définie)
             </Text>
           </Appear>
@@ -440,14 +429,7 @@ export default class Presentation extends React.Component {
 
         <Slide transition={['fade']} bgColor="primary" notes={notes.commitlint}>
           <Heading textColor="tertiary" size={4}>
-            grâce à
-            <Code
-              textColor="secondary"
-              bgColor="primary"
-              textSize={styles.codeTitle}
-            >
-              commitlint
-            </Code>
+            grâce à<Text textColor="secondary">commitlint</Text>
             et au hook de commit-msg
           </Heading>
           <Appear>
@@ -494,14 +476,7 @@ export default class Presentation extends React.Component {
               😫
             </span>
           </Heading>
-          <Code
-            textColor="secondary"
-            bold
-            bgColor="primary"
-            textSize={styles.codeTitle}
-          >
-            git commitizen
-          </Code>
+          <span style={styles.colors.secondary}>git commitizen</span>
           <Heading size={4} textColor="tertiary">
             peut l'assister dans sa saisie
           </Heading>
@@ -627,13 +602,7 @@ export default class Presentation extends React.Component {
             </Link>{' '}
             et son{' '}
             <Link href="https://github.com/mbrehin/capitaine-flemme/blob/master/README.md">
-              <Code
-                textColor="secondary"
-                bgColor="primary"
-                textSize={styles.codeTitle}
-              >
-                README.md
-              </Code>
+              <span style={styles.colors.secondary}>README.md</span>
             </Link>{' '}
             détaillant l'essentiel des procédures de mise en place, ainsi que
             plein de liens utiles{' '}
