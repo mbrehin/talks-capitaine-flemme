@@ -1,2 +1,3 @@
 <p>Montrer le fichier de pre-commit présent dans le projet et surtout la configuration des pattern (extensible).</p>
 <p>Démonstration avec des <code>TODO/FIXME</code> trainant dans le code, et avec des marqueurs de conflits.</p>
+<p>Expliquer également <code>precise-commits</code> (concurrent de lint-staged) qui repassera la linter et éventuellement le formatter sur les éléments stagés !</p>
